@@ -1,3 +1,6 @@
+# Make sure we have given path in deployment.yaml to image on dockerhub like below
+image: aditydud/k8s-service-b:latest
+
 # Create spring boot jar
 Goto --> Tasks --> build --> bootjar
 

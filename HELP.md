@@ -1,9 +1,13 @@
-# Build Docker image for service-a
-docker build -t k8s-service-a:latest ./k8s-service-a
+# Create spring boot jar
+Goto --> Tasks --> build --> bootjar
 
-# If using kind, load the image into the kind cluster
-kind load docker-image k8s-service-a
+# Build Docker image for service-a
+docker build -t k8s-service-a:latest .
+
+# Push docker image to dockerhub
+docker tag k8s-service-a:latest aditydud/k8s-service-a:latest
+docker push aditydud/k8s-service-a:latest
 
 # Deploy service-a to Kubernetes
-kubectl apply -f k8s-service-a-deployment.yaml
-kubectl apply -f k8s-service-a-service.yaml
+kubectl apply -f ./kubernetes/deployment.yaml
+kubectl apply -f ./kubernetes/service.yaml

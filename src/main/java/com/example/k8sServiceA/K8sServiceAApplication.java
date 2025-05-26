@@ -1,4 +1,4 @@
-package com.example.k8s_service_a;
+package com.example.k8sServiceA;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -29,6 +29,14 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'com.example.k8sServiceA.K8sServiceAApplication'
+		)
+	}
+}
+
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
